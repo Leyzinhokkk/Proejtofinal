@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎬 Filmes Do Wesley </title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎬 Filmes Do Wesley</h1>
+    <nav>
+      <button onclick="carregarFilmes('now_playing')">Tocando Agora</button>
+      <button onclick="carregarFilmes('popular')">Populares</button>
+      <button onclick="carregarFilmes('top_rated')">Mais Bem Avaliados</button>
+      <button onclick="carregarFilmes('upcoming')">Em Breve</button>
+    </nav>
+    <input type="text" id="pesquisa" placeholder="🔍 Pesquisar filmes..." oninput="buscarFilmes()"/>
+  </header>
+
+  <div id="filmes" class="grid-filmes"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span onclick="fecharModal()" class="close">×</span>
+      <h2 id="titulo"></h2>
+      <p id="descricao"></p>
+      <p><strong>Lançamento:</strong> <span id="lancamento"></span></p>
+      <p><strong>Nota:</strong> <span id="nota"></span></p>
+    </div>
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>
